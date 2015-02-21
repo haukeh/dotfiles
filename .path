@@ -1,3 +1,4 @@
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
