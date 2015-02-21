@@ -1,6 +1,6 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
-export MAVEN_OPTS='-Xms256m -XX:MaxPermSize=1024m -Xmx1024m'
+export MAVEN_OPTS="-noverify -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Xmx512M"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
