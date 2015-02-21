@@ -1,5 +1,6 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
+export MAVEN_OPTS='-Xms256m -XX:MaxPermSize=1024m -Xmx1024m'
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -46,18 +47,3 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
-
-# Use Homebrew PHP for CLI
-export PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
-
-# Local /bin folder in path
-export PATH=$PATH:~/bin
-
-export MAVEN_OPTS='-Xms256m -XX:MaxPermSize=1024m -Xmx1024m'
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
-
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/hauke/.gvm/bin/gvm-init.sh" ]] && source "/Users/hauke/.gvm/bin/gvm-init.sh"
