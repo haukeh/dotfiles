@@ -1,7 +1,3 @@
-[user]
-	name = Hauke Hans
-  email = hans@silpion.de
-
 [credential]
 	helper = osxkeychain
 
