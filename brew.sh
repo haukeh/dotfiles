@@ -12,6 +12,7 @@ brew upgrade
 brew tap homebrew/dupes
 brew install caskroom/cask/brew-cask
 
+brew install git
 
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
@@ -35,16 +36,24 @@ brew install openssl
 brew install nano
 brew install less
 brew install pstree
+brew install ngrep
+brew install tree
+
+brew cask install java
+brew install scala
+brew install maven
+brew install npm
 
 brew install wireshark
-
+brew install jenv
 brew cask install sublime-text
 brew cask install postgres
 brew cask install spectacle
+brew cask install dropbox
 
-brew cask install java
-brew install jenv
 brew cask install intellij-idea
+
+
 
 brew cleanup
 brew doctor
