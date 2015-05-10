@@ -50,7 +50,7 @@ brew cask install sublime-text
 brew cask install postgres
 brew cask install spectacle
 brew cask install dropbox
-
+brew cask install skype
 brew cask install intellij-idea
 
 
