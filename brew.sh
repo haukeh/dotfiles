@@ -42,11 +42,13 @@ brew install tree
 brew cask install java
 brew install scala
 brew install maven
+brew install sbt
 brew install npm
 
 brew install wireshark
 brew install jenv
 brew cask install sublime-text
+brew cask install tunnelblick
 brew cask install postgres
 brew cask install spectacle
 brew cask install dropbox
