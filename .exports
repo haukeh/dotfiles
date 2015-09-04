@@ -19,3 +19,5 @@ export MANPAGER='less -X';
 
 # Always enable colored `grep` output.
 export GREP_OPTIONS='--color=auto';
+
+export MAVEN_OPTS="-noverify -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Xmx512M"
