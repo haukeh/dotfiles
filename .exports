@@ -6,8 +6,8 @@ export LANG='en_US.UTF-8';
 export LC_ALL='en_US.UTF-8';
 export LESS_TERMCAP_md="${yellow}";
 export MANPAGER='less -X';
-export GREP_OPTIONS='--color=auto';
 
 ###
 
 export MAVEN_OPTS="-noverify -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Xmx512M"
+export PYTHONIOENCODING='UTF-8';
