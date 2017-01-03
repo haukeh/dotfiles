@@ -1,4 +1,4 @@
-# Setting up new OSX 
+# Setting up new MacOS installation
 
 1. Install system updates from terminal
 
