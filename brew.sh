@@ -1,61 +1,42 @@
 #!/usr/bin/env bash
 
-# Ask for the administrator password upfront.
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until the script has finished.
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 brew update
 brew upgrade
-
-brew tap homebrew/dupes
-brew install caskroom/cask/brew-cask
-
-brew install git
-
-# Install GNU core utilities (those that come with OS X are outdated).
-# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-brew install coreutils
-sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
 brew install moreutils
 brew install findutils
 brew install gnu-sed --with-default-names
-# Install Bash 4.
-# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
-# running `chsh`.
-brew install bash
-brew install bash-completion
-brew install wget --with-iri
-brew install vim --override-system-vi
-brew install grep
-brew install openssh
-brew install screen
-brew install openssl
-brew install nano
-brew install less
-brew install pstree
-brew install ngrep
-brew install tree
+brew tap homebrew/versions
+brew install bash-completion2
 
+brew install bash
+# Switch to using brew-installed bash as default shell
+if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
+  echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
+  chsh -s /usr/local/bin/bash;
+fi;
+
+brew install wget --with-iri
+brew install vim --with-override-system-vi
+brew install homebrew/dupes/grep
+brew install homebrew/dupes/openssh
+brew install homebrew/dupes/screen
+brew install ssh-copy-id
+brew install tree
+brew install zopfli
+brew install openssl
+
+brew install jenv
 brew cask install java
 brew install scala
-brew install maven
-brew install sbt
-brew install npm
 
-brew install wireshark
-brew install jenv
-brew cask install sublime-text
-brew cask install tunnelblick
-brew cask install postgres
-brew cask install spectacle
 brew cask install dropbox
-brew cask install skype
+brew cask install 1password
 brew cask install intellij-idea
-
-
+brew cask install google-chrome
+brew cask install spectacle
+brew cask install sublime-text
+brew cask install slack
+brew cask install spotify
 
 brew cleanup
-brew doctor
